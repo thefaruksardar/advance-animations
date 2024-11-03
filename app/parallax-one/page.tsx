@@ -22,49 +22,47 @@ function Features() {
     offset: ["start end", "end start"],
   });
 
-  const sm = useTransform(scrollYProgress, [0, 1], [0, 50]);
-  const md = useTransform(scrollYProgress, [0, 1], [0, -150]);
-  const lg = useTransform(scrollYProgress, [0, 1], [0, -350]);
-  console.log(scrollYProgress.get());
+  const sm = useTransform(scrollYProgress, [0, 1], [0, 350]);
+  const md = useTransform(scrollYProgress, [0, 1], [0, -350]);
+  const lg = useTransform(scrollYProgress, [0, 1], [0, -550]);
 
   return (
-    <section ref={refContainer} className="min-w-full prose py-96">
+    <section ref={refContainer} className="min-w-full prose py-96 relative">
       <h2>This is Awesome!</h2>
-      <div className="w-full flex justify-center relative">
-        <motion.div style={{ y: sm }}>
+
+      <div className="w-full flex justify-center ">
+        <motion.div>
           <Image
             src="/img-1.png"
             width={800}
             height={1200}
             alt="image 1"
             title="image 1"
-            className="w-[26rem] rounded-md shadow-md"
-            priority
-          />
-        </motion.div>
-        <motion.div style={{ y: md, zIndex: "90" }}>
-          <Image
-            src="/img-2.jpg"
-            width={800}
-            height={1200}
-            alt="image 2" // Updated alt and title attributes
-            title="image 2" // Updated alt and title attributes
-            className="w-[18rem] rounded-md shadow-md absolute  top-[30%] left-[15%] transform -translate-y-1/2"
-            priority
-          />
-        </motion.div>
-        <motion.div style={{ y: lg }}>
-          <Image
-            src="/img-3.jpg"
-            width={800}
-            height={1200}
-            alt="image 3" // Updated alt and title attributes
-            title="image 3" // Updated alt and title attributes
-            className="w-[21rem] rounded-md shadow-md absolute top-[35%] left-[55%] transform -translate-y-1/2"
-            priority
-          />
+            className="w-[20rem] rounded-md shadow-md"
+          ></Image>
         </motion.div>
       </div>
+
+      <motion.div style={{ y: md }}>
+        <Image
+          src="/img-2.jpg"
+          width={800}
+          height={1200}
+          alt="image 2"
+          title="image 2"
+          className="w-[11rem] rounded-md shadow-md absolute top-[10%] left-[20%] transform -translate-y-1/2"
+        />
+      </motion.div>
+      <motion.div style={{ y: lg }}>
+        <Image
+          src="/img-3.jpg"
+          width={800}
+          height={1200}
+          alt="image 3"
+          title="image 3"
+          className="w-[13rem] rounded-md shadow-md absolute top-[35%] left-[55%] transform -translate-y-1/2"
+        />
+      </motion.div>
     </section>
   );
 }
