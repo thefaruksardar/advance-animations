@@ -11,9 +11,10 @@ export default function Page() {
     offset: ["start start", "end end"],
   });
   return (
-    <div ref={containerRef} className="h-[200vh]">
+    <div ref={containerRef} className="h-[300vh]">
       <Section1 scrollYProgress={scrollYProgress} />
       <Section2 scrollYProgress={scrollYProgress} />
+      <Section3 scrollYProgress={scrollYProgress} />
     </div>
   );
 }
@@ -24,7 +25,7 @@ function Section1({ scrollYProgress }: { scrollYProgress: MotionValue }) {
   return (
     <motion.section
       style={{ scale, rotate }}
-      className="prose sticky top-0 h-screen min-w-full bg-red-500 text-neutral-50 flex justify-center items-center flex-col -z-20"
+      className="prose  h-screen min-w-full bg-red-500 text-neutral-50 flex justify-center items-center flex-col sticky top-0 -z-20"
     >
       <h1 className="text-neutral-50">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit?
@@ -44,7 +45,25 @@ function Section2({ scrollYProgress }: { scrollYProgress: MotionValue }) {
   return (
     <motion.section
       style={{ scale, rotate }}
-      className="prose h-screen min-w-full bg-purple-500 text-neutral-950 flex justify-center items-center flex-col"
+      className="prose h-screen min-w-full bg-purple-500 text-neutral-950 flex justify-center items-center flex-col sticky top-0 -z-20"
+    >
+      <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit?</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet explicabo
+        neque animi magnam, sit et incidunt ex sunt, nobis, dolore placeat ipsum
+        quasi quae consequatur esse! Ea provident nam ut!
+      </p>
+    </motion.section>
+  );
+}
+
+function Section3({ scrollYProgress }: { scrollYProgress: MotionValue }) {
+  const opacity = useTransform(scrollYProgress, [0.5, 1], [0.5, 1]);
+  const scale = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
+  return (
+    <motion.section
+      style={{ opacity, scale }}
+      className="prose h-screen min-w-full bg-green-500 text-neutral-950 flex justify-center items-center flex-col top-0 -z-10"
     >
       <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit?</h1>
       <p>
