@@ -22,7 +22,7 @@ function Features() {
     offset: ["start end", "end start"],
   });
 
-  const sm = useTransform(scrollYProgress, [0, 1], [0, 350]);
+  // const sm = useTransform(scrollYProgress, [0, 1], [0, 350]);
   const md = useTransform(scrollYProgress, [0, 1], [0, -350]);
   const lg = useTransform(scrollYProgress, [0, 1], [0, -550]);
 
