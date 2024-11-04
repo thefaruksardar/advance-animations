@@ -9,6 +9,15 @@ export default function Home() {
       <Link href="/parallax-one" className="py-2 px-6 border rounded-xl">
         Parallax One
       </Link>
+      <Link
+        href="/scroll-cards-parallax"
+        className="py-2 px-6 border rounded-xl"
+      >
+        Scroll Cards Parallax
+      </Link>
+      <Link href="/reveal-text" className="py-2 px-6 border rounded-xl">
+        Reveal Text
+      </Link>
     </div>
   );
 }
