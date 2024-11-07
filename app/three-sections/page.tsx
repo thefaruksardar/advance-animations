@@ -25,7 +25,7 @@ function Section1({ scrollYProgress }: { scrollYProgress: MotionValue }) {
   return (
     <motion.section
       style={{ scale, rotate }}
-      className="prose  h-screen min-w-full bg-red-500 text-neutral-50 flex justify-center items-center flex-col sticky top-0 -z-20"
+      className="prose p-5  h-screen min-w-full bg-red-500 text-neutral-50 flex justify-center items-center flex-col sticky top-0 -z-20"
     >
       <h1 className="text-neutral-50">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit?
@@ -45,7 +45,7 @@ function Section2({ scrollYProgress }: { scrollYProgress: MotionValue }) {
   return (
     <motion.section
       style={{ scale, rotate }}
-      className="prose h-screen min-w-full bg-purple-500 text-neutral-950 flex justify-center items-center flex-col sticky top-0 -z-20"
+      className="prose p-5 h-screen min-w-full bg-purple-500 text-neutral-950 flex justify-center items-center flex-col sticky top-0 -z-20"
     >
       <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit?</h1>
       <p>
@@ -63,7 +63,7 @@ function Section3({ scrollYProgress }: { scrollYProgress: MotionValue }) {
   return (
     <motion.section
       style={{ opacity, scale }}
-      className="prose h-screen min-w-full bg-green-500 text-neutral-950 flex justify-center items-center flex-col top-0 -z-10"
+      className="prose p-5 h-screen min-w-full bg-green-500 text-neutral-950 flex justify-center items-center flex-col top-0 -z-10"
     >
       <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit?</h1>
       <p>
